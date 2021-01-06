@@ -64,7 +64,12 @@
         <!--头部-->
         <el-header height="100px">我的管理系统</el-header>
         <!--中间块-->
-        <el-main>Main</el-main>
+        <el-main>
+          <div class="main-body">
+            <!--设置为可变-->
+            <router-view/>
+          </div>
+        </el-main>
       </el-container>
 
     </el-container>
@@ -130,6 +135,18 @@ export default {
   color: #333;
   text-align: center;
   line-height: 160px;
+  padding: 0;
+  overflow: hidden;
+}
+.el-container{
+  height: 100%;
+}
+/*设置中间内部内容*/
+.main-body{
+  background-color: #fff;
+  height: 100%;
+  margin: 10px 5px 10px 5px ;
+  padding: 20px 0px 0px 20px;
 }
 
 
