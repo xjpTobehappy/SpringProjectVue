@@ -55,6 +55,7 @@
               <span slot="title">运营商管理</span>
             </el-menu-item>
 
+
           </el-menu>
         </el-scrollbar>
       </el-aside>
@@ -62,7 +63,7 @@
 
       <el-container>
         <!--头部-->
-        <el-header height="100px">我的管理系统</el-header>
+        <el-header height="80px">我的管理系统</el-header>
         <!--中间块-->
         <el-main>
           <div class="main-body">
@@ -77,86 +78,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "first"
-}
-</script>
+<!--将js代码抽取出去  然后直接引入文件就好-->
+<script src="./first.js"></script>
 
-<style scoped>
-/*头部*/
-.el-header {
-  background-color: #F56C6C;
-  color: white;
-  text-align: center;
-  /*垂直居中  高是多少他就是多少*/
-  line-height: 99.8px;
-}
-
-
-/*左部样式去*/
-.el-aside {
-  background-color: white;
-  color: #444;
-}
-
-/* 这是头像 */
-.title-wrapper {
-  line-height: 99.8px;
-  background-color: #F56C6C;
-}
-
-/*头像*/
-.title-wrapper img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%; /*这是圆角*/
-  vertical-align: middle;
-  margin: 0 8px 0 10px;
-}
-
-/*字体*/
-.title-wrapper span {
-  font-weight: 700;
-  color: white;
-  font-size: 18px;
-}
-/*去除外部滚动条*/
-.scrollbar{
-  height: calc(100% - 110px);
-  width: 100%;
-}
-
-
-
-/*中间块*/
-.el-main {
-  background-color: #E9EEF3;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
-  padding: 0;
-  overflow: hidden;
-}
-.el-container{
-  height: 100%;
-}
-/*设置中间内部内容*/
-.main-body{
-  background-color: #fff;
-  height: 100%;
-  margin: 10px 5px 10px 5px ;
-  padding: 20px 0px 0px 20px;
-}
-
-
-/*设置样式  这样就可以调整成满屏*/
-.first-box {
-  height: 100%;
-}
-
-.el-container {
-  height: 100%;
-}
-
-</style>
+<!--抽取css样式直接导入-->
+<style src="./first.css" ></style>

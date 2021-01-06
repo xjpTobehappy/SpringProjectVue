@@ -31,7 +31,23 @@ const routes = [
   {
     path: '/first',
     name: 'first',
-    component: () => import( '../views/first/first.vue')
+    component: () => import( '../views/first/first.vue'),
+    /*让别人在他的页面里的可变区域显示数据如果定义在外面就是在app的可变区域显示数据*/
+    children:[
+      /*这是首页*/
+      {
+        path:'index',
+        name:'index',
+        component: () => import( '../views/index/index.vue'),
+      },
+
+      /*这是运营商管理*/
+      {
+        path:'supplier',
+        name:'supplier',
+        component: () => import( '../views/supplier/supplier.vue'),
+      }
+    ]
   }
 ]
 
